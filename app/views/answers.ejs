@@ -1,0 +1,83 @@
+<%- include("header") %>
+
+    <form class="container-fluid mycontainer" action="/questions/answer/<%=question.id%>" method="POST">
+        <br>
+        <div class="row pregunta justify-content-center">
+            <div class="row rowquest">
+                <div class="col-md-6 align-self-center contentquest">
+                    <div class="row titlequest">
+                        <%= question.title %>
+                    </div>
+                    <div class="row bodyquest">
+                        <p>
+                            <%= question.body%>
+                        </p>
+                    </div>
+                    <div class="row tagsquest">
+                        <% if(typeof (question.tags) !== "undefined" ){ %>
+                            <% question.tags.forEach(function(tag) { %>
+                                <a class="tag" href="/questions/filterByTag/<%= tag %>">
+                                    <%= tag %>
+                                </a>
+                                <% }); %>
+                                    <% } %>
+                    </div>
+                </div>
+                <div class="col align-self-center infoquest">
+                    <div class="row justify-content-center datequest">
+                        <%= question.date %>
+                    </div>
+                    <div class="row justify-content-center imgquest">
+                        <img src="/image/<%= question.email%>" alt="user image" class="memberImage">
+                        <div class="row justify-content-center namequest">
+                            <%=question.name %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row myrow">
+            <div class="col mycolum">
+                <%=answ.length%> Respuestas
+            </div>
+            <div class="respuestas">
+                <div class="row myrow justify-content-center">
+                    <% answ.forEach(function(answer) { %>
+                        <div class="row rowquest">
+                            <div class="col-md-6 align-self-center contentquest">
+                                <div class="row bodyquest">
+                                    <p>
+                                        <%= answer.body%>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col align-self-center infoquest">
+                                <div class="row justify-content-center datequest">
+                                    <%= answer.date %>
+                                </div>
+                                <div class="row justify-content-center imgquest">
+                                    <img src="/image/<%= answer.email%>" alt="user image" class="memberImage">
+                                    <div class="row justify-content-center namequest ">
+                                        <%=answer.name %>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <% }); %>
+                </div>
+            </div>
+        </div>
+        <div class="formulario ">
+            <div class="row myrow" >
+                <label><h4>Tu respuesta</h4></label>
+                <textarea class="respondercampo" rows="10" name="body" required></textarea>
+            </div>
+            <div class="row myrow justify-content-center ">
+                <button type="submit " class="btn btnform ">Publicar tu respuesta</button>
+            </div>
+        </div>
+        </div>
+
+        </body>
+
+        </html>

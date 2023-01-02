@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>404</title>
+    <link rel="icon" href="/images/favicon.png">
+    <link rel="stylesheet" href="/stylesheets/login.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Road+Rage&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <form class="container mycontainer" action="/users/register" method="POST" enctype="multipart/form-data">
+        <div class="header">
+            <h1 id="titulo">404</h1>
+        </div>
+        <% if (typeof errorMsg != "undefined") { %>
+            <p class="error row justify-content-center">*
+                <%= errorMsg %>
+            </p>
+            <% } %>
+                <div class="row myrow">
+                    <label for="email">Email <input type="email" name="email" id="email" required></label>
+                </div>
+                <div class="row myrow">
+                    <label for="password">Contraseña <input type="password" name="password" id="password" required></label>
+                </div>
+                <div class="row myrow">
+                    <label for="confirmPassword">Confirmar contraseña <input type="password" name="confirmPassword" id="confirmPassword" required></label>
+                </div>
+                <div class="row myrow">
+                    <label for="name">Nombre para mostrar <input type="name" name="name" id="name" required> </label>
+                </div>
+                <div class="row myrow">
+                    <label for="image">Imagen de perfil</label>
+                    <input accept=".jpg,.png,.jpeg,.gif" class="image" name="image" value="image" type="file" id="image">
+                </div>
+                <div class="row myrow">
+                    <div class="col mycolum">
+                        <button type="button" class="btn" onclick="window.location.href='./login'">Iniciar sesión</button>
+                    </div>
+                    <div class="col mycolum">
+                        <button type="submit" class="btn">Crear cuenta</button>
+                    </div>
+                </div>
+    </form>
+</body>
+
+</html>

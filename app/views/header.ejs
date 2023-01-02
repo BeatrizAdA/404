@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>404</title>
+    <link rel="icon" href="/images/favicon.png">
+    <link rel="stylesheet" href="/stylesheets/index.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Road+Rage&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <div class="row justify-content-center">
+            <div class="container-fluid header">
+
+                <div class="row myrow cab">
+                    <div class="col-2 mycolum align-self-center">
+                        <div class="row myrow justify-content-center">
+                            <button type="button" class="btn" onclick="window.location.href='/questions'">Preguntas</button>
+                        </div>
+                        <div class="row myrow justify-content-center">
+                            <button type="button" class="btn" onclick="window.location.href='/questions/notAnswered'">Sin responder</button>
+                        </div>
+                        <div class="row myrow justify-content-center">
+                            <button type="button" class="btn" onclick="window.location.href='/users/allUsers'">Usuarios</button>
+                        </div>
+                    </div>
+                    <div class="col mycolum align-self-center">
+                        <h1 id="titulo"><a id="titleLink" href="/">404</a></h1>
+                    </div>
+
+                    <div class="col-2 mycolum align-self-center">
+                        <div class="row myrow justify-content-center">
+                            <img src="/image/<%=email%>" alt="user image" id="imgPerfil">
+                        </div>
+                        <div class="row myrow justify-content-center">
+                            <%=name%>
+                        </div>
+                        <div class="row myrow justify-content-center">
+                            <button type="button" onclick="window.location.href='/users/logout'" class="btn btnc">Cerrar sesion</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row myrow barrasearch justify-content-center">
+                    <form class="search" action="/questions/searchfilter" method="post">
+                        <div class="input-group">
+                            <input type="text" name="searchText" class="form-control">
+                            <button class="btn btnsearch" type="submit" onclick="window.location.href='../questions/searchfilter'">Buscar</button>
+                        </div>
+                </div>
+                </form>
+            </div>
+        </div>
+    </header>

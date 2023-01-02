@@ -1,0 +1,58 @@
+<%- include("header") %>
+
+    <div class="container-fluid mycontainer">
+        <br>
+        <div>
+            <h1>Preguntas sin responder</h1>
+        </div>
+        <br>
+        <div class="row myrow">
+            <div class="col mycolum">Nº preguntas
+                <%=quests.length%>
+            </div>
+            <div class="col mycolum"><button type="submit" class="btn" onclick="window.location.href='/questions/formulate'">Formular pregunta</button></div>
+        </div>
+        <div class="preguntas">
+            <div class="row myrow justify-content-center">
+                <% quests.forEach(function(question) { %>
+                    <div class="row rowquest">
+                        <div class="col align-self-center contentquest ">
+                            <div class="row titlequest">
+                                <a class="titlequest" href="/questions/answers/<%= question.id %>">
+                                    <%= question.title %>
+                                </a>
+                            </div>
+                            <div class="row bodyquest">
+                                <p>
+                                    <%= question.body.substr(0, 90)%>...</p>
+                            </div>
+                            <div class="row tagsquest">
+                                <% if(typeof (question.tags) !== "undefined" ){ %>
+                                    <% question.tags.forEach(function(tag) { %>
+                                        <a class="tag" href="/questions/filterByTag/<%= tag %>">
+                                            <%= tag %>
+                                        </a>
+                                        <% }); %>
+                                            <% } %>
+                            </div>
+                        </div>
+                        <div class="col align-self-center infoquest">
+                            <div class="row justify-content-center datequest">
+                                <%= question.date %>
+                            </div>
+                            <div class="row justify-content-center imgquest">
+                                <img src="/image/<%= question.email%>" alt="user image" class="memberImage">
+                                <div class="row justify-content-center namequest">
+                                    <%=question.name %>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <% }); %>
+            </div>
+        </div>
+    </div>
+
+    </body>
+
+    </html>

@@ -1,0 +1,42 @@
+
+    <%- include("header") %>
+
+        <form class="container-fluid mycontainer" action="/questions/formulate" method="post">
+            <br>
+            <div>
+                <h1>Formular pregunta</h1>
+            </div>
+            <br>
+            <div class="formulario">
+                <div class="row myrow">
+                    <label><h4>Título</h3></label>
+                    <p>Sé específico/a e imagina que estás haciendo la pregunta a otra persona</p>
+                    <input type="text" name="title" class="form-control" required>
+                </div>
+                <br>
+                <div class="row myrow">
+                    <label><h4>Cuerpo</h4></label>
+                    <p>Incluye toda la información que alguien necesitaría para poder responder tu pregunta</p>
+                    <textarea id="cuerpo" class="form-control" rows="10" name="body" required></textarea>
+                </div>
+                <br>
+                <div class="row myrow">
+                    <label><h4>Etiquetas</h4></label>
+                    <p>Añade hasta 5 etiquetas para describir sobre qué trata tu pregunta</p>
+                    <% if(typeof (errorMsg) !== "undefined" ){ %>
+                        <p class="errorMsg">*<%=errorMsg%></p> 
+                    <%}%>
+                    
+                    <input type="text" name="tags" class="form-control">
+                </div>
+                <br>
+                <br>
+                <div class="row myrow justify-content-center">
+                    <button type="submit" class="btn btnform">Publicar tu pregunta</button>
+                </div>
+            </div>
+        </form>
+
+</body>
+
+</html>

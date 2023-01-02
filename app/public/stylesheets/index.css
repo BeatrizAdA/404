@@ -1,0 +1,190 @@
+body {
+    font-family: 'Questrial', sans-serif !important;
+    background-image: url(../images/background.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.header {
+    width: 95% !important;
+    text-align: center;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.374);
+    font-weight: bold;
+    color: rgb(255, 95, 35) !important;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.174);
+    background-color: black;
+    padding: 1em;
+    position: fixed;
+}
+
+#titulo {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 5em;
+    font-weight: bold;
+}
+
+#titleLink{
+    color: rgb(255, 95, 35) !important;
+    text-decoration: none;
+}
+
+.mycontainer {
+    width: 95% !important;
+    text-align: center;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.174);
+    color: black !important;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.374);
+    background-color: rgba(255, 255, 255, 0.685);
+    margin-top: 14em !important;
+}
+
+.cab {
+    height: 35%;
+}
+
+.barrasearch {
+    height: 10%;
+}
+
+.mycolum {
+    align-items: center !important;
+    text-align: center;
+    padding: 0.1em;
+}
+
+.btn {
+    background-color: rgb(255, 95, 35) !important;
+    color: white !important;
+    margin: 1em;
+    width: 10em !important;
+    font-size: 10px !important;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.374);
+}
+
+.btn:hover {
+    background-color: black!important;
+    color: rgb(255, 95, 35) !important;
+    border-color: rgb(255, 95, 35) !important;
+}
+
+.btnsearch {
+    margin: auto;
+    padding: auto;
+    text-align: center !important;
+    font-size: 11px !important;
+    height: 2.5em !important;
+    background-color: black;
+}
+
+.btnform {
+    width: 15em !important;
+    font-size: 14px !important;
+}
+
+.insearch {
+    float: right;
+    background-color: white;
+    color: white;
+    color: rgb(255, 95, 35) !important;
+}
+
+.form-control {
+    height: 1.7em;
+}
+
+.search {
+    width: 92.5% !important;
+    align-items: center;
+    margin-bottom: 0.2em;
+}
+
+.formulario {
+    width: 50%;
+    height: 40em;
+    text-align: left;
+    display: inline-block;
+    align-items: center;
+}
+
+#cuerpo {
+    height: 8em;
+}
+
+#imgPerfil {
+    height: 4em;
+    width: 6em;
+    margin: 0.5em;
+    border-radius: 25%;
+}
+
+#bnvenTitle{
+    font-weight: bold;
+}
+
+.rowquest {
+    margin: 1em !important;
+    height: auto;
+    width: 75% !important;
+    background-color: white;
+    color: black;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.374);
+    padding: 1em !important;
+}
+
+.contentquest {
+    width: 90% !important;
+}
+
+.titlequest {
+    width: auto !important;
+    font-size: x-large !important;
+    color: rgb(255, 95, 35) !important;
+    text-decoration: none;
+    text-shadow: none;
+    font: bold !important;
+    text-align: left;
+}
+
+.bodyquest {
+    width: auto !important;
+    margin: 1em;
+    text-shadow: none !important;
+    text-align: justify !important;
+}
+
+.tag {
+    width: auto !important;
+    border: solid rgb(255, 95, 35);
+    background-color: rgb(255, 95, 35);
+    color: white;
+    margin: 0.1em;
+    border-radius: 0.3em;
+    font-size: x-small;
+}
+
+.infoquest {
+    width: 20em !important;
+}
+
+.memberImage{
+    height: 3em !important;
+    width: 5em !important;
+    margin: 0.7em !important;
+    border-radius: 25% !important;
+}
+
+.pbody {
+    width: 10em;
+}
+
+
+.respondercampo{
+    height: 10em !important;
+    margin-bottom:1em !important;
+}
+
+.errorMsg{
+    color: rgb(255, 95, 35);
+    font-weight: bold;
+    text-shadow: none;
+}
